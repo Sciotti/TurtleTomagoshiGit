@@ -1,0 +1,8 @@
+{
+        "name" : "George III",
+        "Happiness" : 5,
+        "Hunger" : 5,
+        "health" : 5,
+        "temperature" : 5,
+        "skin" : "assets/images/turtle.png"
+}
