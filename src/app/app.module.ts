@@ -10,7 +10,11 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { ReversePipe } from './reverse.pipe';
 import { SortPipe } from './sort.pipe';
 import { NgOptimizedImage } from '@angular/common';
-import { TurtleComponent } from './turtle/turtle.component'
+import { TurtleComponent } from './turtle/turtle.component';
+import { HealthComponent } from './health/health.component';
+import { HungerComponent } from './hunger/hunger.component';
+import { HappinessComponent } from './happiness/happiness.component';
+import { CurrencyComponent } from './currency/currency.component'
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { TurtleComponent } from './turtle/turtle.component'
     ReversePipe,
     SortPipe,
     TurtleComponent,
+    HealthComponent,
+    HungerComponent,
+    HappinessComponent,
+    CurrencyComponent,
 
   ],
   imports: [
