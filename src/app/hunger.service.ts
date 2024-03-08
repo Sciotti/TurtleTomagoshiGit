@@ -29,7 +29,7 @@ export class HungerService {
     
   }
   private getRandomInterval(): number {
-    return Math.floor(Math.random() * (5000 - 1000) + 1000)
+    return Math.floor(Math.random() * (5000 - 1000) + 2000)
     //return Math.floor(Math.random() * (15 * 60 * 1000 - 5 * 60 * 1000) + 5 * 60 * 1000); // Entre 5 et 15 minutes en millisecondes
   }
   Reset(){
@@ -42,5 +42,22 @@ export class HungerService {
 
   unlockVariable(): void {
     this.variableLocked = false;
+  }
+
+  LittleBoost() : void {
+    this.hunger += 1;
+    this.hungerSubject.next(this.hunger);
+  }
+
+  BigBoost() : void {
+    this.hunger += 7;
+    this.hungerSubject.next(this.hunger);
+  }
+
+  goodState() : boolean {
+    if (this.hunger >= 2) {
+      return true;
+    }
+    return false;
   }
 }

@@ -32,11 +32,31 @@ export class HealthService {
     return Math.floor(Math.random() * (9000 - 5000) + 5000)
     //return Math.floor(Math.random() * (15 * 60 * 1000 - 5 * 60 * 1000) + 5 * 60 * 1000); // Entre 5 et 15 minutes en millisecondes
   }
+  Reset(){
+    this.health = 5;
+    this.healthSubject.next(this.health);
+  }
+  LittleBoost() : void {
+    this.health += 1;
+    this.healthSubject.next(this.health);
+  }
+
+  BigBoost() : void {
+    this.health += 7;
+    this.healthSubject.next(this.health);
+  }
   lockVariable(): void {
     this.variableLocked = true;
   }
 
   unlockVariable(): void {
     this.variableLocked = false;
+  }
+
+  goodState() : boolean {
+    if (this.health >= 2) {
+      return true;
+    }
+    return false;
   }
 }

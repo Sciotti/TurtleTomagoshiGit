@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Pour aligner les composants avec un espace égal entre eux */
+  }
+  .containerColumn {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 3 colonnes de 3/4 et 1 colonne de 1/4 */
+  }  
+
+  .column-3-4 {
+    background-color: #f0f0f0; /* Juste pour visualiser la colonne */
+  }
+  
+  .column-1-4 {
+    background-color: #d0d0d0; /* Juste pour visualiser la colonne */
+  }

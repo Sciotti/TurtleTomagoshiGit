@@ -28,4 +28,13 @@ export class CurrencyService {
     this.currencyAmount += amount;
     this.currencyAmountSubject.next(this.currencyAmount);
   }
+  
+  decreaseCurrency(amount: number): void {
+    this.currencyAmount -= amount;
+    this.currencyAmountSubject.next(this.currencyAmount);
+  }
+
+  numberOfCurrency(): number {
+    return this.currencyAmount;
+  }
 }

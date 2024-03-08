@@ -14,7 +14,8 @@ import { TurtleComponent } from './turtle/turtle.component';
 import { HealthComponent } from './health/health.component';
 import { HungerComponent } from './hunger/hunger.component';
 import { HappinessComponent } from './happiness/happiness.component';
-import { CurrencyComponent } from './currency/currency.component'
+import { CurrencyComponent } from './currency/currency.component';
+import { SkinsComponent } from './skins/skins.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CurrencyComponent } from './currency/currency.component'
     HungerComponent,
     HappinessComponent,
     CurrencyComponent,
+    SkinsComponent,
 
   ],
   imports: [

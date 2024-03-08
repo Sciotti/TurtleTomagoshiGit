@@ -33,11 +33,31 @@ export class HappinessService {
     return Math.floor(Math.random() * (9000 - 5000) + 3000)
     //return Math.floor(Math.random() * (15 * 60 * 1000 - 5 * 60 * 1000) + 5 * 60 * 1000); // Entre 5 et 15 minutes en millisecondes
   }
+  Reset(){
+    this.happiness = 5;
+    this.happinessSubject.next(this.happiness);
+  }
+  LittleBoost() : void {
+    this.happiness += 1;
+    this.happinessSubject.next(this.happiness);
+  }
+
+  BigBoost() : void {
+    this.happiness += 7;
+    this.happinessSubject.next(this.happiness);
+  }
   lockVariable(): void {
     this.variableLocked = true;
   }
 
   unlockVariable(): void {
     this.variableLocked = false;
+  }
+
+  goodState() : boolean {
+    if (this.happiness >= 2) {
+      return true;
+    }
+    return false;
   }
 }
