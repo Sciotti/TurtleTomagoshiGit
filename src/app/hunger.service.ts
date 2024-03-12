@@ -22,7 +22,7 @@ export class HungerService {
 
         // Si la variable passe à 0, émettez un événement spécial
         if (this.hunger === 0) {
-          this.hungerSubject.next(0); // Émettez 0 pour indiquer que la variable est à 0
+          this.hungerSubject.next(-1); // Émettez 0 pour indiquer que la variable est à 0
         }
       }
     }, this.getRandomInterval());

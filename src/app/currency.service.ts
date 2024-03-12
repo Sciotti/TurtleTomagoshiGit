@@ -34,6 +34,11 @@ export class CurrencyService {
     this.currencyAmountSubject.next(this.currencyAmount);
   }
 
+  stopCurrency(): void {
+    this.currencyAmount = 0;
+    this.currencyAmountSubject.next(this.currencyAmount);
+    this.currencyAmountSubject.complete();
+  }
   numberOfCurrency(): number {
     return this.currencyAmount;
   }

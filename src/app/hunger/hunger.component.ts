@@ -21,9 +21,9 @@ export class HungerComponent {
         //console.log('La variable 1 est maintenant à 1');
         this.lockOtherVariables();
         this.skinService.hungerTurtle();
-      } else if (variable === 0) {
-        // Réagir lorsque la variable passe à 0
-        //console.log('La variable 1 est maintenant à 0');
+      } else if (variable === -1) {
+        this.turtleService.Dead();
+        this.skinService.deadTurtle();
       } else {
         // Réagir à d'autres valeurs de la variable si nécessaire
       }

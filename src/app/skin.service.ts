@@ -52,6 +52,11 @@ export class SkinService {
       this.normalTurtle();
     }
   }
+
+  deadTurtle(): void {
+    this.skin = "assets/images/deadTurtle.png";
+    this.skinSubject.next(this.skin);
+  }
   start(): void {
       this.skinSubject.next(this.skin);
   }
